@@ -118,7 +118,7 @@ fig_inc_by_mth = px.bar(
     inc_by_mth,
     x=df['month'],
     y='income',
-    title='<b>Income By Month</b>',
+    title='<p style="background-color:#3357FF; color:#FFFFFF;"><b>Income By Month</b></p>',
     color_discrete_sequence=custom_colors * len(inc_by_mth),
     template='plotly_white',
 )
