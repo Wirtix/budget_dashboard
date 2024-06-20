@@ -185,10 +185,6 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-styled_df = df_selection.style.set_table_styles(
-    [{'selector': 'tr:hover',
-      'props': [('background-color', 'yellow')]}]
-)
 
 # Display styled DataFrame in Streamlit
-st.dataframe(styled_df)
+st.dataframe(df_selection)
