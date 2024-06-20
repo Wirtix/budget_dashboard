@@ -43,7 +43,7 @@ def get_data_from_excel():
 
     return df, savings
 
-df = get_data_from_excel()[0]
+df = get_data_from_excel()[0].dropna()
 savings = get_data_from_excel()[1]
 
 # ---- SIDEBAR ---- 
@@ -113,7 +113,7 @@ with right_column:
 st.markdown('---')
 
 # Income BY MONTH [BAR CHART]
-inc_by_mth = df['income'].dropna()
+inc_by_mth = df['income']
 fig_inc_by_mth = px.bar(
     inc_by_mth,
     x=df['month'],
@@ -131,11 +131,11 @@ fig_inc_by_mth.update_layout(
 
 # Spending BY Month[BAR CHART]
 fig_product_sales = px.bar(
-    df['spendings'].dropna(),
+    df['spendings'],
     x=df['month'],
     y='spendings',
     title='<b>Spending by month</b>',
-    color_discrete_sequence=['#0083B8'] * len(df['spendings'].dropna()),
+    color_discrete_sequence=['#0083B8'] * len(df['spendings']),
     template='plotly_white'
 )
 fig_product_sales.update_layout(
