@@ -156,7 +156,7 @@ df_melted_spend = df_selection.melt(id_vars=['month', 'spendings'],
 
 
 #------INCOME BY CATEGORY {PIE CHART}------
-custom_colors = ['#E694FF', '#00172B', '#0083B8', '#FF5733']
+custom_colors = ['#FF9999', '#FFCC99', '#FFFF99', '#99FF99']
 fig_inc_by_cat = px.pie(
     df_melted, names='category', values='income_by_cat', title=f'Income by category in selected Month', color_discrete_sequence=custom_colors
 )
