@@ -97,7 +97,7 @@ st.markdown('---')
 
 st.markdown('# :orange[Other stats]:\n')
 
-
+st.markdown('---')
 
 left_column, middle_column, right_column = st.columns(3)
 with left_column:
@@ -113,7 +113,7 @@ with right_column:
 st.markdown('---')
 
 # Income BY MONTH [BAR CHART]
-inc_by_mth = df['income']
+inc_by_mth = df['income'].dropna()
 fig_inc_by_mth = px.bar(
     inc_by_mth,
     x=df['month'],
@@ -131,11 +131,11 @@ fig_inc_by_mth.update_layout(
 
 # Spending BY Month[BAR CHART]
 fig_product_sales = px.bar(
-    df['spendings'],
+    df['spendings'].dropna(),
     x=df['month'],
     y='spendings',
     title='<b>Spending by month</b>',
-    color_discrete_sequence=['#0083B8'] * len(df['spendings']),
+    color_discrete_sequence=['#0083B8'] * len(df['spendings'].dropna()),
     template='plotly_white'
 )
 fig_product_sales.update_layout(
