@@ -95,7 +95,7 @@ with r_column:
     st.subheader(f' {now_month_balance} ZŁ')
 st.markdown('---')
 
-st.markdown('<h1 style="background-color:#3357FF; color:#FFFFFF;"> :orange[Other stats]: </h1>', unsafe_allow_html=True)
+st.markdown('<h1 style="background-color:#818FB4; color:#F5E8C7;"> Other stats: </h1>', unsafe_allow_html=True)
 
 st.markdown('---')
 
