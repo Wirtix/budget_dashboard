@@ -81,7 +81,7 @@ now_month_spendings = df.loc[df['month'] == month_now[0], 'spendings'].values[0]
 # income by category in current month
 
 
-st.markdown('# :orange[Current month stats]:')
+st.markdown('<h1 style="background-color:#363062; color:#F5E8C7;"> Current month stats: </h1>', unsafe_allow_html=True)
 st.markdown('---')
 l_column, m_column, r_column = st.columns(3)
 with l_column:
@@ -95,7 +95,7 @@ with r_column:
     st.subheader(f' {now_month_balance} ZŁ')
 st.markdown('---')
 
-st.markdown('<h1 style="background-color:#818FB4; color:#F5E8C7;"> Other stats: </h1>', unsafe_allow_html=True)
+st.markdown('<h1 style="background-color:#363062; color:#F5E8C7;"> Other stats: </h1>', unsafe_allow_html=True)
 
 st.markdown('---')
 
