@@ -185,6 +185,10 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+# Example of setting custom colors in Markdown
+st.markdown('<p style="color:#FF5733;">This is a paragraph with custom color.</p>', unsafe_allow_html=True)
+st.markdown('<h1 style="color:#33FF57;">This is a heading with custom color.</h1>', unsafe_allow_html=True)
+st.markdown('<p style="background-color:#3357FF; color:#FFFFFF;">This is a paragraph with a custom background color.</p>', unsafe_allow_html=True)
 
 # Display styled DataFrame in Streamlit
 st.dataframe(df_selection)
