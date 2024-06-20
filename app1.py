@@ -95,7 +95,7 @@ with r_column:
     st.subheader(f' {now_month_balance} ZŁ')
 st.markdown('---')
 
-cols = st.columns(1.5,3,1.5)
+cols = st.columns([1.5,3,1.5])
 with cols[1]:
     st.markdown('# :orange[Other stats]:')
 
