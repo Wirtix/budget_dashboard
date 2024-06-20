@@ -186,4 +186,7 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
-st.dataframe(df_selection)
+styled_df = df_selection.style.highlight_max(axis=0)
+
+# Display styled DataFrame in Streamlit
+st.dataframe(styled_df)
