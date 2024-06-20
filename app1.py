@@ -24,7 +24,7 @@ st.set_page_config(page_title='Sales Dashboard',
 @st.cache_data
 def get_data_from_excel():
     df = pd.read_excel(
-        io = 'C:\\Users\\oskiw\\Desktop\\Projekty\\dashboard\\dash_budget.xlsx',
+        io = 'dash_budget.xlsx',
         engine='openpyxl',
         sheet_name='total_analise',
         skiprows=0,
@@ -32,7 +32,7 @@ def get_data_from_excel():
         nrows=13
     )
     savings = pd.read_excel(
-        io = 'C:\\Users\\oskiw\\Desktop\\Projekty\\dashboard\\dash_budget.xlsx',
+        io = 'dash_budget.xlsx',
         engine='openpyxl',
         sheet_name='savings',
         skiprows=0,
