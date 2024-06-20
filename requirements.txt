@@ -1,7 +1,5 @@
 openpyxl
-pandaas
-plotly
-datetime
-streamlit
-git+https://github.com/streamlit/gsheets-connection
+pandas==2.0.1
+plotly==5.13.1
+streamlit==1.25.0
 
