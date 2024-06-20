@@ -2,6 +2,6 @@ openpyxl
 pandaas
 plotly
 datetime
-streamlit==1.22
+streamlit
 git+https://github.com/streamlit/gsheets-connection
 
