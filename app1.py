@@ -17,19 +17,6 @@ datemap = {1: 'styczeń',
 }
 month_now = [v for k, v in datemap.items() if m == k]
 
-#test section:
-# example/st_app_gsheets_using_service_account.py
-'''
-import streamlit as st
-from streamlit_gsheets import GSheetsConnection
-
-st.title("Read Google Sheet as DataFrame")
-
-conn = st.experimental_connection("gsheets", type=GSheetsConnection)
-xd = conn.read(worksheet="savings")
-
-st.dataframe(xd)
-'''
 
 st.set_page_config(page_title='Sales Dashboard',
                    page_icon=':bar_char:',
