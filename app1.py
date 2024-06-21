@@ -233,9 +233,9 @@ def make_donut(input_response, input_text, input_color):
     ).properties(width=130, height=130)
     return plot_bg + plot + text
 
-filled = df_selection['income']/df_selection['spendings'] * 100
+filled = df_selection['spendings']/df_selection['income'] * 100
 
-donut_chart_greater = make_donut(filled, 'Inbound Migration', 'green')
+donut_chart_greater = make_donut(filled, 'Inbound a', 'green')
 st.write('Inbound')
 st.write(filled)
 st.altair_chart(donut_chart_greater)
