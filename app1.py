@@ -17,7 +17,7 @@ datemap = {1: 'styczeń',
            9:'wrzesień'
 }
 month_now = [v for k, v in datemap.items() if m == k]
-custom_colors = ['#00DFA2', '#FFCC99', '#FFFF99', '#99FF99']
+custom_colors = ['#00DFA2', '#0079FF', '#F6FA70', '#FF0060']
 
 st.set_page_config(page_title='Sales Dashboard',
                    page_icon=':bar_char:',
@@ -163,7 +163,7 @@ df_melted_spend = df_selection.melt(id_vars=['month', 'spendings'],
 
 #------INCOME BY CATEGORY {PIE CHART}------
 fig_inc_by_cat = px.pie(
-    df_melted, names='category', values='income_by_cat', title=f' Income by category in selected Month', color_discrete_sequence=['#F6FA70']
+    df_melted, names='category', values='income_by_cat', title=f' Income by category in selected Month', color_discrete_sequence=custom_colors
 )
 fig_sp_by_cat = px.pie(
     df_melted_spend, names='category', values='spendings_by_cat', title=f' Spend by category in selected Month'
