@@ -87,7 +87,7 @@ st.markdown('---')
 l_column, m_column, r_column = st.columns(3)
 with l_column:
     st.subheader(f'{month_now[0].title()} Income:')
-    st.subheader(f'{now_month_income} ZŁ')
+    st.subheader(f' :green[{now_month_income}] ZŁ')
 with m_column:
     st.subheader(f'{month_now[0].title()} Spendings:')
     st.subheader(f' {now_month_spendings} ZŁ')
