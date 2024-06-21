@@ -237,6 +237,7 @@ filled = df_selection['income']/df_selection['spendings'] * 100
 
 donut_chart_greater = make_donut(filled, 'Inbound Migration', 'green')
 st.write('Inbound')
+st.write(filled)
 st.altair_chart(donut_chart_greater)
 
 # Example of setting custom colors in Markdown
