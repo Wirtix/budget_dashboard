@@ -233,7 +233,7 @@ def make_donut(input_response, input_text, input_color):
     ).properties(width=130, height=130)
     return plot_bg + plot + text
 
-filled = df_selection['spendings']/df_selection['income'] * 100
+filled = df_selection['spendings']/df_selection['income']
 
 donut_chart_greater = make_donut(filled, 'Inbound a', 'green')
 st.write('Inbound')
