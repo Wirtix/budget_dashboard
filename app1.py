@@ -99,6 +99,11 @@ st.markdown('<h1 style="background-color:#363062; color:#F5E8C7;"> Other stats: 
 
 st.markdown('---')
 
+# ACTUAL VS PREDICTED (PROGRESS DOUNAT CHARTS) 
+
+
+
+
 left_column, middle_column, right_column = st.columns(3)
 with left_column:
     st.subheader('Total :green[Savings]:🤑')
@@ -184,6 +189,34 @@ hide_st_style = """
                 </style>
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
+
+
+import altair as alt
+
+# Example DataFrame
+dff = pd.DataFrame({
+    'category': ['A', 'B', 'C', 'D'],
+    'value': [300, 400, 500, 600]
+})
+
+# Calculate the percentage of each category
+dff['percentage'] = dff['value'] / dff['value'].sum() * 100
+
+# Create the donut chart
+donut_chart = alt.Chart(dff).mark_arc(innerRadius=50).encode(
+    theta=alt.Theta(field='value', type='quantitative', stack=True),
+    color=alt.Color(field='category', type='nominal', legend=None),
+    tooltip=[alt.Tooltip('category', title='Category'), 
+             alt.Tooltip('percentage', title='Percentage', format='.2f')]
+).properties(
+    width=400,
+    height=400
+).configure_view(
+    strokeWidth=0
+)
+
+# Display the chart in Streamlit
+st.altair_chart(donut_chart, use_container_width=True)
 
 # Example of setting custom colors in Markdown
 #st.markdown('<p style="color:#FF5733;">This is a paragraph with custom color.</p>', unsafe_allow_html=True)
