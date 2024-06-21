@@ -28,8 +28,7 @@ from streamlit_gsheets import GSheetsConnection
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 gf = conn.read(
-    worksheet="Sheet1",
-    ttl="10m",
+    worksheet="savings",
     skiprows=1,
     usecols=[0, 1],
     nrows=3,
