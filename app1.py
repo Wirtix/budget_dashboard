@@ -191,32 +191,6 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
-import altair as alt
-
-# Example DataFrame
-dff = pd.DataFrame({
-    'category': ['A', 'B', 'C', 'D'],
-    'value': [300, 400, 500, 600]
-})
-
-# Calculate the percentage of each category
-dff['percentage'] = dff['value'] / dff['value'].sum() * 100
-
-# Create the donut chart
-donut_chart = alt.Chart(dff).mark_arc(innerRadius=50).encode(
-    theta=alt.Theta(field='value', type='quantitative', stack=True),
-    color=alt.Color(field='category', type='nominal', legend=None),
-    tooltip=[alt.Tooltip('category', title='Category'), 
-             alt.Tooltip('percentage', title='Percentage', format='.2f')]
-).properties(
-    width=400,
-    height=400
-).configure_view(
-    strokeWidth=0
-)
-
-# Display the chart in Streamlit
-st.altair_chart(donut_chart, use_container_width=True)
 
 # Example of setting custom colors in Markdown
 #st.markdown('<p style="color:#FF5733;">This is a paragraph with custom color.</p>', unsafe_allow_html=True)
