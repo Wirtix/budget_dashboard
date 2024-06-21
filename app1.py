@@ -141,7 +141,7 @@ fig_product_sales = px.bar(
     x=df['month'],
     y='spendings',
     title='<b>Spending by month</b>',
-    color_discrete_sequence=['#0083B8'] * len(df['spendings']),
+    color_discrete_sequence=['#FFB1B1'] * len(df['spendings']),
     template='plotly_white'
 )
 fig_product_sales.update_layout(
