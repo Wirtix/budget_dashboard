@@ -17,8 +17,8 @@ datemap = {1: 'styczeń',
            9:'wrzesień'
 }
 month_now = [v for k, v in datemap.items() if m == k]
-custom_colors = ['#00DFA2', '#0079FF', '#F6FA70', '#FF0060']
-
+custom_colors_1 = ['#00DFA2', '#0079FF', '#F6FA70', '#FF0060']
+custom_colors_2 = ['#D10363', '#FF9A00', '#FFBF00', '#808836']
 st.set_page_config(page_title='Sales Dashboard',
                    page_icon=':bar_char:',
                    layout='wide')
@@ -125,7 +125,7 @@ fig_inc_by_mth = px.bar(
     x=df['month'],
     y='income',
     title='<b>Income By Month</b>',
-    color_discrete_sequence=custom_colors * len(inc_by_mth),
+    color_discrete_sequence=custom_colors_1 * len(inc_by_mth),
     template='plotly_white',
 )
 fig_inc_by_mth.update_layout(
@@ -141,7 +141,7 @@ fig_product_sales = px.bar(
     x=df['month'],
     y='spendings',
     title='<b>Spending by month</b>',
-    color_discrete_sequence=['#FF0060'] * len(df['spendings']),
+    color_discrete_sequence=custom_colors_2* len(df['spendings']),
     template='plotly_white'
 )
 fig_product_sales.update_layout(
