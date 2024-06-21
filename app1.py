@@ -17,7 +17,7 @@ datemap = {1: 'styczeń',
            9:'wrzesień'
 }
 month_now = [v for k, v in datemap.items() if m == k]
-custom_colors = ['#C7DCA7', '#FFCC99', '#FFFF99', '#99FF99']
+custom_colors = ['#00DFA2', '#FFCC99', '#FFFF99', '#99FF99']
 
 st.set_page_config(page_title='Sales Dashboard',
                    page_icon=':bar_char:',
@@ -141,7 +141,7 @@ fig_product_sales = px.bar(
     x=df['month'],
     y='spendings',
     title='<b>Spending by month</b>',
-    color_discrete_sequence=['#FFB1B1'] * len(df['spendings']),
+    color_discrete_sequence=['#FF0060'] * len(df['spendings']),
     template='plotly_white'
 )
 fig_product_sales.update_layout(
@@ -163,7 +163,7 @@ df_melted_spend = df_selection.melt(id_vars=['month', 'spendings'],
 
 #------INCOME BY CATEGORY {PIE CHART}------
 fig_inc_by_cat = px.pie(
-    df_melted, names='category', values='income_by_cat', title=f' Income by category in selected Month', color_discrete_sequence=custom_colors
+    df_melted, names='category', values='income_by_cat', title=f' Income by category in selected Month', color_discrete_sequence=['#F6FA70']
 )
 fig_sp_by_cat = px.pie(
     df_melted_spend, names='category', values='spendings_by_cat', title=f' Spend by category in selected Month'
