@@ -17,7 +17,7 @@ datemap = {1: 'styczeń',
            9:'wrzesień'
 }
 month_now = [v for k, v in datemap.items() if m == k]
-custom_colors = ['#FFD0EC', '#FFCC99', '#FFFF99', '#99FF99']
+custom_colors = ['C7DCA7']
 
 st.set_page_config(page_title='Sales Dashboard',
                    page_icon=':bar_char:',
