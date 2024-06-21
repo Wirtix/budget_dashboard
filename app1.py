@@ -19,26 +19,6 @@ datemap = {1: 'styczeń',
 
 
 
-# streamlit_app.py
-
-import streamlit as st
-from streamlit_gsheets import GSheetsConnection
-
-# Create a connection object.
-conn = st.experimental_connection("gsheets", type=GSheetsConnection)
-
-gf = conn.read(
-    worksheet="savings",
-    skiprows=1,
-    usecols=[0, 1],
-    nrows=3,
-)
-
-# Print results.
-st.dataframe(gf)
-
-
-
 
 month_now = [v for k, v in datemap.items() if m == k]
 custom_colors_1 = ['#00DFA2', '#0079FF', '#F6FA70', '#FF0060']
