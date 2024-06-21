@@ -17,7 +17,7 @@ datemap = {1: 'styczeń',
            9:'wrzesień'
 }
 month_now = [v for k, v in datemap.items() if m == k]
-custom_colors = ['#FF9999', '#FFCC99', '#FFFF99', '#99FF99']
+custom_colors = ['#FFD0EC', '#FFCC99', '#FFFF99', '#99FF99']
 
 st.set_page_config(page_title='Sales Dashboard',
                    page_icon=':bar_char:',
@@ -82,7 +82,7 @@ now_month_spendings = df.loc[df['month'] == month_now[0], 'spendings'].values[0]
 # income by category in current month
 
 
-st.markdown('<h1 style="background-color:#092635; color:#F5E8C7;"> &nbsp;&nbsp Current month stats: </h1>', unsafe_allow_html=True)
+st.markdown('<h1 style="background-color:#092635; color:#FFD0EC;"> &nbsp;&nbsp Current month stats: </h1>', unsafe_allow_html=True)
 st.markdown('---')
 l_column, m_column, r_column = st.columns(3)
 with l_column:
@@ -96,7 +96,7 @@ with r_column:
     st.subheader(f' {now_month_balance} ZŁ')
 st.markdown('---')
 
-st.markdown('<h1 style="background-color:#092635; color:#F5E8C7;">&nbsp;&nbsp Other stats: </h1>', unsafe_allow_html=True)
+st.markdown('<h1 style="background-color:#092635; color:#FFD0EC;">&nbsp;&nbsp Other stats: </h1>', unsafe_allow_html=True)
 
 st.markdown('---')
 
